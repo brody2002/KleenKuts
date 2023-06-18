@@ -1,0 +1,373 @@
+/*Common code for all headers*/
+body{
+    background-color: rgb(220, 219, 219);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;    
+}
+.venmo_logo{
+  z-index: 200;
+  opacity: 1;
+  
+  /* fixed within viewport */
+  /* position: fixed; */
+
+  /* set position */
+  bottom: 50%;
+  right: 100%;
+  display: block;
+    margin: 0 auto;
+
+  /* must have dimension */
+  width: 200px;
+  height: 200px;
+}
+.venmo_logo:hover{
+  opacity: 0.8;
+  transition: opacity .4s;
+  bottom: 4%;
+  /* position: relative; right: 94px; */
+}   
+.instagram_logo{
+    z-index:100;
+    opacity: 0.8;
+    /*position: relative; right: 94px; */
+    /* fixed within viewport */
+    position: fixed;
+
+    /* set position */
+    bottom: 3%;
+    right: 3%;
+
+    /* must have dimension */
+    width: 100px;
+    height: 100px;
+}
+.instagram_logo:hover{
+    opacity: 1;
+    transition: opacity .4s;
+    bottom: 4%;
+    /*position: relative; right: 94px; */
+}
+.banner{
+    width: 100%;
+    max-height: 100%;  
+    object-fit: cover;
+    /*background-image: url(background.jpg);*/
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 100%;
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(55, 55, 55,0.94);
+    opacity: .94;
+    height: 8%;
+    line-height: 300%;
+}
+.navbar:hover {
+    scale:1.005;  
+    transition:0.2s;  
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0  30px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    font-size: 200%;
+    z-index: 1000;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 10px;
+    background: #028ff4;
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+    background: #67c0ff;
+}
+.custom-paragraph {
+    text-align: center;
+    background-color: rgb(55, 55, 55,0.9); /* Dark semi-opaque black background */
+    color: white; /* White text color */
+    padding: 20px; /* Add padding for better readability */
+    border-radius: 7px; /* Add rounded corners */
+    max-width: 1000px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the paragraph horizontally */
+    word-wrap: break-word; /* Wrap long words */
+    line-height: 34px;
+    font-size: 130%;
+    max-height: 400px;
+    margin-top: 200px;
+}
+.custom-paragraph:hover {
+    scale:1.005;  
+    transition:0.2s;     
+}
+.banner_about{
+    width: 100%;
+    margin: auto;
+    max-height: 1000px;  
+    display: flex;
+    align-items: left;
+    background-color: rgb(55, 55, 55);
+    opacity: .94;
+    height: 80;
+}
+.banner_about:hover {
+    scale:1.005;  
+    transition:0.2s;     
+}
+.banner_about ul{
+    color: white;
+    position: relative; left: 3%;
+    text-align: left;
+    /*position: center;*/
+    align-items: left;
+    
+}
+.banner_about ul li{
+    
+    font-size: 140%;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+}
+
+.Teambanner{
+    width: auto;
+    height: auto;
+}
+.logo{
+    width: 210px;
+    cursor: pointer;
+    padding: 14px;
+    margin-left:7%;
+}
+.location_banner{
+    margin: auto;
+    background-color: rgb(220, 219, 219);
+    opacity: .94;
+    height: 300;
+    position: relative;
+    text-align: center; 
+}
+.LogoBlack_image{
+    padding: 2%;
+    height: 200px;    
+    place-items: center;
+    position: relative; left: 5%;
+  
+}
+.Address{
+    padding: 2%;
+    align-items: center;
+    color: rgb(55, 55, 55);
+    top: 0%; position: relative;
+    font-size: 130%;
+}
+.Address:hover{
+    color: rgb(0, 0, 0);
+}
+li {
+    list-style-type: none;
+
+}
+
+.donateButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  text-decoration: none;
+  color: rgb(255,255,255);
+  text-transform: uppercase;
+  font-size: 200%;
+  font-family: sans-serif;
+  z-index: 1000;
+}
+
+nav {
+  margin-top: 50;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+
+.popupDonate {
+  /* Hide the popup by default*/
+  display: none; 
+  position: fixed;
+  z-index: 1; /* Make sure the popup appears on top of other elements */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if needed */
+}
+
+/* Content of Donate Popup */
+.donateContent {
+  background-color: transparent;
+  margin: 15% auto; /* 15% from the top and centered horizontally */
+  padding: 100px;
+  text-align: center;
+  width: 80%; /* 80% of the parent element */
+  position: fixed;
+  z-index: 2;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Close button */
+.close {
+  text-align: center;
+    background-color: rgb(55, 55, 55,0.9); /* Dark semi-opaque black background */
+    color: white; /* White text color */
+    padding: 20px; /* Add padding for better readability */
+    border-radius: 7px; /* Add rounded corners */
+    max-width: 1000px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the paragraph horizontally */
+    word-wrap: break-word; /* Wrap long words */
+    line-height: 34px;
+    font-size: 130%;
+    max-height: 400px;
+    margin-top: 200px;
+
+
+  z-index: 2;
+  float: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.close:hover,
+.close:focus {
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* CONFETTI */
+#confettis {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  height: 70%;
+  width: 100%;
+}
+.confetti {
+  left: 50%;
+  width: 2%;
+  height: 2%;
+  position: absolute;
+  transform-origin: left top;
+  animation: confetti 5s ease-in-out -2s infinite;
+}
+
+@keyframes confetti {
+  0% {
+    transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+  }
+  25% {
+    transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+  }
+  50% {
+    transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh);
+  }
+  75% {
+    transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh);
+  }
+  100% {
+    transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh);
+  }
+}
+
+.confetti:nth-child(1) {
+  left: 10%;
+  animation-delay: 0;
+  background-color: #fc0120;
+}
+.confetti:nth-child(2) {
+  left: 20%;
+  animation-delay: -5s;
+  background-color: #8257e6;
+}
+.confetti:nth-child(3) {
+  left: 30%;
+  animation-delay: -3s;
+  background-color: #ffbf4d;
+}
+.confetti:nth-child(4) {
+  left: 40%;
+  animation-delay: -2.5s;
+  background-color: #fe5d7a;
+}
+.confetti:nth-child(5) {
+  left: 50%;
+  animation-delay: -4s;
+  background-color: #45ec9c;
+}
+.confetti:nth-child(6) {
+  left: 60%;
+  animation-delay: -6s;
+  background-color: #f6e327;
+}
+.confetti:nth-child(7) {
+  left: 70%;
+  animation-delay: -1.5s;
+  background-color: #f769ce;
+}
+.confetti:nth-child(8) {
+  left: 80%;
+  animation-delay: -2s;
+  background-color: #007de7;
+}
+.confetti:nth-child(9) {
+  left: 90%;
+  animation-delay: -3.5s;
+  background-color: #63b4fc;
+}
+.confetti:nth-child(10) {
+  left: 100%;
+  animation-delay: -2.5s;
+  background-color: #f9c4ea;
+}
+
+/********************/
+
+/*unique to this css file*/
+.Kurtis{
+    display: block;
+    
+    max-width:640;
+    max-height:450px;
+    width: auto;
+    height: auto;  
+    margin: 0 auto; 
+
+}
+.vidEmbed{
+    display: block;
+    margin: 0 auto;
+}
