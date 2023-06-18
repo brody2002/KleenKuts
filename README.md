@@ -11,9 +11,12 @@ Features:
   
 *Some Html and CSS (little java)
 
-Future Changes
+Future Changes:
+
 *Will shit focus from unhoused population to general people in Davis that want haircuts
+
 *Business Website for friend. 
+
 *Adjust Calendly availability
   
  
