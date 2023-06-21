@@ -238,6 +238,7 @@ li {
 .vidEmbed{
     display: block;
     margin: auto auto;
+    
 }
 
 @media screen and (max-width: 1161px){
