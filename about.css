@@ -1,0 +1,44 @@
+
+.HomeText{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50);
+    text-align: center;
+    color: rgb(255,255,255);
+
+}
+.HomeText h1{   
+    font-size: 30;
+    margin-top: 80px;
+
+}
+.HomeText p{
+    font-size: 24;
+}
+.Kurtis{
+    display: block;
+    
+    max-width:900px;
+    max-height:450px;
+    width: auto;
+    height: auto;  
+    margin: 0 auto; 
+
+}
+
+.container {
+    margin-top: 10px;
+}
+.custom-paragraph {
+    
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-opaque black background */
+    color: white; /* White text color */
+    padding: 40px; /* Add padding for better readability */
+    border-radius: 5px; /* Add rounded corners */
+    max-width: 1000px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the paragraph horizontally */
+    word-wrap: break-word; /* Wrap long words */
+    font-size: 26;
+    max-height: 800px;
+}
